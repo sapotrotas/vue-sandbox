@@ -10,7 +10,17 @@
   </pagination-table>
   -->
   <button @click="page++">page</button>
-  <button @click="createRepo">create vue-graphql repo</button>
+  
+  <!--<button @click="createRepo">create vue-graphql repo</button>-->
+
+
+  <button 
+    class="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3"
+    @click="getTitleEnvVar"
+  >
+    env var testing
+  </button>
+
 </template>
 
 <script>
@@ -33,8 +43,10 @@
         }
       }
     },
+    /*
     apollo: {
       // Queries here
+      
       loginGitHub: {
         query: GET_ACCOUNT
       },
@@ -46,10 +58,7 @@
             numberOfRepos: 5
           }
         }
-      }
-
-
-      /*
+      },
       characters: {
         query: GET_CHARACTERS,
         // reactive
@@ -60,8 +69,8 @@
           }
         }
       }
-      */
     },
+    */
     computed: {
       charactersTotal () {
         return this.characters.info?.count
@@ -107,6 +116,10 @@
             }
           }
         })
+      },
+      getTitleEnvVar() {
+        console.log(import.meta.env.VITE_APP_TITLE)
+        console.log(import.meta.env.DEV)
       }
     } 
   }

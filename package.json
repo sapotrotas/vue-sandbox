@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
+    "stag": "vite build --mode staging",
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest --dom --disableConsoleIntercept=false"
@@ -19,7 +20,10 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.4",
     "@vue/test-utils": "^2.4.0-alpha.2",
+    "autoprefixer": "^10.4.20",
     "happy-dom": "^15.8.3",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
     "vite": "^5.4.10",
     "vitest": "^2.1.3"
   }
